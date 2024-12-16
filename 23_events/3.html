@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    <div id="container"></div>
+</body>
+<script>
+    const start = document.getElementById("start");
+    const stop = document.getElementById("stop");
+    const container = document.getElementById("container"); 
+
+    let  intervalId
+    let count = 0
+
+
+    const interval = function(){
+        const element = document.createElement("h1")
+        count++
+        element.innerHTML = `count is ${count}`
+        container.appendChild(element)
+        start.style.display = "none"
+    }
+
+    start.addEventListener("click", function(){
+         intervalId = setInterval(interval,1000)
+    });
+
+    stop.addEventListener("click", function(){
+        clearInterval(intervalId);
+        stop.style.display = "none";
+    })
+</script>
+</html>
