@@ -5,3 +5,5 @@ arroffruit.forEach(function(element,index,array){
     console.log(element,index,array);
     
 })
+
+

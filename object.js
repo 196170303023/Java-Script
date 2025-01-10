@@ -101,13 +101,14 @@
 
 // main();
 
-const arr = [5,6,1,3,2,6,8,9,11,4,]
+const arr = [4, 6, 2, 1, 5, 8, 9, 4];
+const target = 17;
 
-function sortArray(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        setTimeout(function(){console.log(arr[i])},arr[i])        
+for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i] + arr[j] === target) {
+            console.log(`Your first element is ${arr[i]} and your second element is ${arr[j]}`);
+            break;
+        }
     }
 }
-sortArray(arr);
-
-
