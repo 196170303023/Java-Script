@@ -23,7 +23,7 @@
 
 //............................................SOLUTION 3 ................................
 
-function ( nums, target){
+function twoSum ( nums, target){
     let left = 0;
     let n = nums.length
     let right = n - 1;
